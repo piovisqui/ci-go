@@ -37,7 +37,7 @@ jobs:
     runs-on: ${{ matrix.distros }}
     strategy:
       matrix:
-        distros: ['fedora_latest', 'ubuntu-latest']
+        distros: ['ubuntu-24.04', 'ubuntu-22.04']
     steps:
     - uses: actions/checkout@v3
     - name: Build
