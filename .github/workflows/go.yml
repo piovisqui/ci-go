@@ -35,9 +35,9 @@ jobs:
   build:
     needs: test
     runs-on: ${{ matrix.distros }}
-  #  strategy:
-  #    matrix:
-  #      distros: ['fedora_latest', 'ubuntu-latest']
+    strategy:
+      matrix:
+        distros: ['fedora_latest', 'ubuntu-latest']
     steps:
     - uses: actions/checkout@v3
     - name: Build
