@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         go_version: ['1.18', '1.17', '>=1.18']
-        distros: ['fedora_latest', 'ubuntu-latest']
+        distros: ['ubuntu-24.04', 'ubuntu-22.04']
     steps:
     - uses: actions/checkout@v3
 
@@ -35,9 +35,9 @@ jobs:
   build:
     needs: test
     runs-on: ${{ matrix.distros }}
-    strategy:
-      matrix:
-        distros: ['fedora_latest', 'ubuntu-latest']
+  #  strategy:
+  #    matrix:
+  #      distros: ['fedora_latest', 'ubuntu-latest']
     steps:
     - uses: actions/checkout@v3
     - name: Build
