@@ -11,11 +11,11 @@ jobs:
   test:
     runs-on: ${{ matrix.distros }}
     env:
-      HOST={{ secrets.HOST }}
-      DBNAME={{ secrets.DBNAME }}
-      USER={{ secrets.USER }}
-      PASSWORD= {{ secrets.PASSWORD }}
-      PORT={{ secrets.PORT }}
+      HOST=${{ secrets.HOST }}
+      DBNAME=${{ secrets.DBNAME }}
+      USER=${{ secrets.USER }}
+      PASSWORD=${{ secrets.PASSWORD }}
+      PORT=${{ secrets.PORT }}
     strategy:
       matrix:
         go_version: ['1.18', '1.17', '>=1.18']
