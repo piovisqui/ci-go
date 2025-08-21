@@ -2,7 +2,6 @@ package database
 
 import (
 	"log"
-	"os"
 
 	"github.com/guilhermeonrails/api-go-gin/models"
 	"gorm.io/driver/postgres"
@@ -15,11 +14,11 @@ var (
 )
 
 func ConectaComBancoDeDados() {
-	endereco := os.Getenv("HOST")
+	/*endereco := os.Getenv("HOST")
 	usuario := os.Getenv("USER")
 	senha := os.Getenv("PASSWORD")
 	nomeBanco := os.Getenv("DBNAME")
-	portaBanco := os.Getenv("PORT")
+	portaBanco := os.Getenv("PORT")*/
 	//stringDeConexao := "host=" + endereco + " user=" + usuario + " password=" + senha + " dbname=" + nomeBanco + " port=5432 sslmode=disable"
 	stringDeConexao := "host=localhost user=root password=root dbname=root port=5432 sslmode=disable"
 	DB, err = gorm.Open(postgres.Open(stringDeConexao))
